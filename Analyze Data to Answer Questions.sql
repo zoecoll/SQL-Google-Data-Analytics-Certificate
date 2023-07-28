@@ -9,3 +9,4 @@ FROM
 		`bigquery-public-data.new_york.citibike_trips`
 GROUP BY
 		start_station_name, end_station_name, usertype
+
