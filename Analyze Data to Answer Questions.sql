@@ -1,4 +1,4 @@
-# Week2
+##Week2##
 
 SELECT
   usertype,
@@ -52,3 +52,35 @@ FULL OUTER JOIN
 	employee_data.departments ON
 	employees.department_id = departments.department_id
 ///
+
+##Week 3##
+
+SELECT column_name(s)
+FROM table_name AS alias_name;
+
+SELECT column_name AS alias_name
+FROM table_name;
+
+alternatively..
+FROM table_name alias_name
+SELECT column_name alias_name
+
+FROM work_day.employees AS employees
+
+-- Using JOIN's effectively--
+The general JOIN syntax
+
+SELECT
+	--table columns from tables are inserted here
+	table_name1.column_name
+	table_name2.column_name
+FROM
+	table_name1
+JOIN
+	table_name2
+ON 	table_name1.column_name = table_name2.column_name
+
+	
+
+
+
