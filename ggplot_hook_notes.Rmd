@@ -1,0 +1,15 @@
+---
+title: "Untitled"
+author: "Zoe Collins"
+date: "2024-03-24"
+output: html_document
+---
+
+## Setting up my enviroment
+Notes: setting up my R enviroment by loading the 'tidyverse' and 'palmer penguins' packages
+
+```{r loading packages}
+library(tidyverse)
+library(palmerpenguins)
+```
+
