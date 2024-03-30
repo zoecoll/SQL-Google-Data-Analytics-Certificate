@@ -29,3 +29,9 @@ WHERE page_likes.page_id IS NULL;
 SELECT part, assembly_step
 FROM parts_assembly
 WHERE finish_date is NULL;
+
+/* 5 - Write a query that calculates the total viewership for laptops and mobile devices where mobile is defined as the sum of tablet and phone viewership.*/
+SELECT 
+COUNT(*) FILTER (WHERE device_type = 'laptop') AS laptop_views,
+COUNT(*) FILTER (WHERE device_type IN ('tablet', 'phone')) AS mobile_deviews
+FROM viewership;
