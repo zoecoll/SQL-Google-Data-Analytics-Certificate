@@ -18,3 +18,10 @@ GROUP BY candidate_id
 
 HAVING COUNT (skill) = 3
 ORDER BY candidate_id;
+
+
+
+SELECT pages.page_id
+FROM pages
+LEFT OUTER JOIN page_likes ON pages.page_id = page_likes.page_id
+WHERE page_likes.page_id IS NULL;
