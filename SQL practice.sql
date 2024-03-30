@@ -1,3 +1,5 @@
+/* 1 */
+
 SELECT tweet_count_per_user AS tweet_bucket,
 COUNT (user_id) AS users_num
 FROM (
@@ -9,7 +11,7 @@ GROUP BY user_id) AS total_tweets
 
 GROUP BY tweet_count_per_user;
 
-***********
+/* 2 */
 
 SELECT candidate_id
 FROM candidates
@@ -19,7 +21,7 @@ GROUP BY candidate_id
 HAVING COUNT (skill) = 3
 ORDER BY candidate_id;
 
-
+/* 3 */
 
 SELECT pages.page_id
 FROM pages
