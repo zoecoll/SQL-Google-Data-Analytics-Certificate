@@ -82,3 +82,14 @@ GROUP BY title, description, company_id
 SELECT COUNT ( DISTINCT company_id) AS duplicate_companies
 FROM job_count_cte
 WHERE job_count >1;
+
+/*CTE CONCEPT*/
+WITH category_sales (category, total_sales)
+AS (
+    SELECT category, SUM(sales_amount) AS total_sales
+    FROM sales
+    GROUP BY category
+)
+SELECT *
+FROM category_sales;
+/***************/
