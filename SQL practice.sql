@@ -10,6 +10,20 @@ GROUP BY user_id) AS total_tweets
 
 GROUP BY tweet_count_per_user;
 
+/* 1- 2nd */
+
+SELECT 
+tweet_count_per_user AS tweet_bucket,
+COUNT(user_id) AS users_num
+FROM (
+SELECT user_id,
+COUNT (tweet_id) AS tweet_count_per_user
+FROM tweets
+WHERE EXTRACT(YEAR FROM tweet_date) = '2022'
+GROUP BY user_id) AS total_tweets
+
+GROUP BY tweet_count_per_user;
+
 /* 2 - Write a query to list the candidates who possess all of the required skills for the job. */
 SELECT candidate_id
 FROM candidates
