@@ -83,7 +83,7 @@ SELECT COUNT ( DISTINCT company_id) AS duplicate_companies
 FROM job_count_cte
 WHERE job_count >1;
 
-/*CTE CONCEPT*/
+/*Common Table Expression (CTE) CONCEPT*/
 
 WITH cte_name (column1, column2, ...)
 AS (
