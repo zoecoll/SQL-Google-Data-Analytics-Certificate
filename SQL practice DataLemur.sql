@@ -82,7 +82,7 @@ WHERE EXTRACT(MONTH FROM sent_date) = '8'
   AND EXTRACT(YEAR FROM sent_date) = '2022'
 GROUP BY sender_id;
 
-/* 8 -  Write a query to retrieve the count of companies that have posted duplicate job listings.*/
+/* cte vs subquery !8 -  Write a query to retrieve the count of companies that have posted duplicate job listings.*/
 WITH job_count_cte AS (
 SELECT 
 company_id,
