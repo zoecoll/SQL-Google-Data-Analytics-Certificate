@@ -44,13 +44,13 @@ SELECT part, assembly_step
 FROM parts_assembly
 WHERE finish_date is NULL;
 
-/* 5 - Write a query that calculates the total viewership for laptops and mobile devices where mobile is defined as the sum of tablet and phone viewership.*/
+/* !5 - Write a query that calculates the total viewership for laptops and mobile devices where mobile is defined as the sum of tablet and phone viewership.*/
 SELECT 
 COUNT(*) FILTER (WHERE device_type = 'laptop') AS laptop_views,
 COUNT(*) FILTER (WHERE device_type IN ('tablet', 'phone')) AS mobile_deviews
 FROM viewership;
 
-/* 6 - for each user who posted at least twice in 2021, 
+/* !6 - for each user who posted at least twice in 2021, 
 write a query to find the number of days between each user’s first post of the year and last post of the year in the year 2021.*/
 SELECT 
   user_id,
