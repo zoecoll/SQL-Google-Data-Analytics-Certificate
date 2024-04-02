@@ -97,6 +97,19 @@ SELECT COUNT ( DISTINCT company_id) AS duplicate_companies
 FROM job_count_cte
 WHERE job_count >1;
 
+##SYNTAX##
+  
+WITH cte_name (column1, column2, ...)
+AS (
+    -- CTE query definition here
+    SELECT column1, column2, ...
+    FROM table_name
+    WHERE condition
+)
+-- Main query that uses the CTE
+SELECT *
+FROM cte_name;
+
 /*Common Table Expression (CTE) CONCEPT*/
 
 WITH cte_name (column1, column2, ...)
