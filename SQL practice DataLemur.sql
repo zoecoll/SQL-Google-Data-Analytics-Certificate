@@ -138,3 +138,15 @@ WHERE trades.status = 'Completed'
 GROUP BY users.city 
 ORDER BY total_orders DESC
 LIMIT 3;
+
+/* ! 10 write a query to retrieve the average star rating for each product, grouped by month.*/
+## Mine ##
+SELECT product_id,
+AVG(stars) AS avg_stars
+FROM reviews
+WHERE product_id AS product
+EXTRACT(MONTH from submit_date) AS mth
+GROUP BY product
+ORDER BY mth;
+
+## Correct ##
