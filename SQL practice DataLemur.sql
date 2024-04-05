@@ -140,12 +140,21 @@ ORDER BY total_orders DESC
 LIMIT 3;
 
 /* ! 10 write a query to retrieve the average star rating for each product, grouped by month.*/
-## Mine ##
+## Try #1 ##
 SELECT product_id,
 AVG(stars) AS avg_stars
 FROM reviews
 WHERE product_id AS product
 EXTRACT(MONTH from submit_date) AS mth
+GROUP BY product
+ORDER BY mth;
+
+## Try #2 ##
+  SELECT product_id,
+EXTRACT(MONTH from submit_date) AS mth,
+ROUND (AVG(stars), 2) AS avg_stars,
+FROM reviews
+WHERE product_id AS product
 GROUP BY product
 ORDER BY mth;
 
