@@ -168,3 +168,15 @@ GROUP BY
   EXTRACT(MONTH FROM submit_date), 
   product_id
 ORDER BY mth, product_id;
+
+/*  1! */
+## Try 1 ##
+
+SELECT app_id,
+ctr
+FROM (
+SELECT event_type, timestamp
+FROM events
+WHERE event_type
+)
+GROUP BY app_id;
