@@ -169,7 +169,7 @@ GROUP BY
   product_id
 ORDER BY mth, product_id;
 
-/*  1! */
+/* !11 */
 ## Try 1 ##
 
 SELECT app_id,
@@ -179,4 +179,16 @@ SELECT event_type, timestamp
 FROM events
 WHERE event_type
 )
+GROUP BY app_id;
+
+## 11 Correct ##
+
+SELECT
+  app_id,
+  ROUND(100.0 *
+    SUM(CASE WHEN event_type = 'click' THEN 1 ELSE 0 END) /
+    SUM(CASE WHEN event_type = 'impression' THEN 1 ELSE 0 END), 2)  AS ctr_rate
+FROM events
+WHERE timestamp >= '2022-01-01' 
+  AND timestamp < '2023-01-01'
 GROUP BY app_id;
