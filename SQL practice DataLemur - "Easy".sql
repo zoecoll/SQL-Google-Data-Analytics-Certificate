@@ -169,7 +169,7 @@ GROUP BY
   product_id
 ORDER BY mth, product_id;
 
-/* !11 */
+/* !11 Write a query to calculate the click-through rate (CTR) for the app in 2022 and round the results to 2 decimal places.*/
 ## Try 1 ##
 
 SELECT app_id,
