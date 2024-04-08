@@ -149,7 +149,7 @@ EXTRACT(MONTH from submit_date) AS mth
 GROUP BY product
 ORDER BY mth;
 
-## Try #2 ##
+## 10 Try #2 ##
   SELECT product_id,
 EXTRACT(MONTH from submit_date) AS mth,
 ROUND (AVG(stars), 2) AS avg_stars,
@@ -158,7 +158,7 @@ WHERE product_id AS product
 GROUP BY product
 ORDER BY mth;
 
-## Try 3 ##
+## 10 Try 3 ##
 SELECT 
 product_id,
 EXTRACT(MONTH from submit_date) AS mth,
@@ -166,7 +166,7 @@ ROUND(AVG(stars), 2) AS avg_stars,
 FROM reviews
 SORT BY mth, product_id;
 
-## Correct ##
+## 10 Correct ##
 SELECT 
   EXTRACT(MONTH FROM submit_date) AS mth,
   product_id,
@@ -175,6 +175,12 @@ FROM reviews
 GROUP BY 
   EXTRACT(MONTH FROM submit_date), 
   product_id
+ORDER BY mth, product_id;
+
+## 10 Highlight ##
+  GROUP BY 
+EXTRACT(MONTH from submit_date),
+product_id
 ORDER BY mth, product_id;
 
 /* !11 Write a query to calculate the click-through rate (CTR) for the app in 2022 and round the results to 2 decimal places.*/
