@@ -181,6 +181,14 @@ WHERE event_type
 )
 GROUP BY app_id;
 
+## Try 2 ##
+SELECT 
+product_id,
+EXTRACT(MONTH from submit_date) AS mth,
+ROUND(AVG(stars), 2) AS avg_stars,
+FROM reviews
+SORT BY mth, product_id;
+
 ## 11 Correct ##
 
 SELECT
