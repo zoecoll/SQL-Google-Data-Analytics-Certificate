@@ -211,3 +211,18 @@ GROUP BY app_id;
 /* 12 Write a query to calculate the total drug sales for each manufacturer. 
   Round the answer to the nearest million and report your results in descending order of total sales. 
   In case of any duplicates, sort them alphabetically by the manufacturer name. */
+## Try 1 ##
+SELECT manufacturer,
+ROUND(SUM(),10) AS sale,
+FROM pharmacy_sales
+GROUP BY manufacturer
+ORDER BY manufacturer;
+
+## Correct ##
+
+SELECT 
+  manufacturer, 
+  CONCAT( '$', ROUND(SUM(total_sales) / 1000000), ' million') AS sales_mil 
+FROM pharmacy_sales 
+GROUP BY manufacturer 
+ORDER BY SUM(total_sales) DESC, manufacturer;
