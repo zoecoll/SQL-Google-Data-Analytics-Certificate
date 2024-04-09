@@ -207,3 +207,7 @@ FROM events
 WHERE timestamp >= '2022-01-01' 
   AND timestamp < '2023-01-01'
 GROUP BY app_id;
+
+/* 12 Write a query to calculate the total drug sales for each manufacturer. 
+  Round the answer to the nearest million and report your results in descending order of total sales. 
+  In case of any duplicates, sort them alphabetically by the manufacturer name. */
