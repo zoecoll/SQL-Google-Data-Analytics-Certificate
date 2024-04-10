@@ -218,6 +218,14 @@ FROM pharmacy_sales
 GROUP BY manufacturer
 ORDER BY manufacturer;
 
+## Try 2 ##
+  SELECT manufacturer,
+ROUND(SUM(total_sales),1000000) AS sale
+FROM pharmacy_sales
+GROUP BY manufacturer
+ORDER BY manufacturer,
+total_sales DESC;
+
 ## Correct ##
 
 SELECT 
