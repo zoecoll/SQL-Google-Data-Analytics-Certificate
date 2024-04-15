@@ -22,7 +22,13 @@ FROM tweets
 WHERE EXTRACT(YEAR FROM tweet_date) = '2022'
 GROUP BY user_id) AS total_tweets
 
+  ## amended ##
 GROUP BY tweet_count_per_user;
+
+SELECT part, assembly_step
+FROM parts_assembly
+WHERE finish_date is NULL
+;
 
 /* 2 - Write a query to list the candidates who possess all of the required skills for the job. */
 SELECT candidate_id
