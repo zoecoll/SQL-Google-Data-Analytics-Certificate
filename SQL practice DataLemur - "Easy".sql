@@ -10,6 +10,15 @@ GROUP BY user_id) AS total_tweets
 
 GROUP BY tweet_count_per_user;
 
+##1 - try 3##
+
+  SELECT
+COUNT(tweet_id) AS tweet_bucket,
+COUNT(user_id) AS users_num
+FROM tweets
+GROUP BY COUNT(tweet_id),
+COUNT(user_id);
+
 /* 1- 2nd */
 
 SELECT 
